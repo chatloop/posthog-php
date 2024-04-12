@@ -469,7 +469,7 @@ class Client
     {
 
         return $this->httpClient->sendRequest(
-            '/api/feature_flag/local_evaluation?send_cohorts&token=' . $this->apiKey,
+            '/api/feature_flag/local_evaluation?send_cohorts&token=' . $this->apiKey . '&t=' . time(),
             null,
             [
                 // Send user agent in the form of {library_name}/{library_version} as per RFC 7231.
